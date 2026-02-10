@@ -993,13 +993,13 @@
       }
     }
     
-    /* Desktop (1025px and above) - Keep current layout exactly the same */
+    /* Desktop (1025px and above) - Full width layout */
     @media screen and (min-width: 1025px) {
-      /* Desktop retains original max-width constraint */
+      /* Full width desktop layout */
       .site-wrapper {
-        max-width: 500px;
-        border-left: 2px solid var(--accent-orange);
-        border-right: 2px solid var(--accent-orange);
+        max-width: 100%;
+        border-left: none;
+        border-right: none;
       }
       
       /* Ensure horizontal overflow prevention */
@@ -1007,32 +1007,36 @@
         overflow-x: hidden;
       }
       
-      /* Desktop spacing preserved */
+      /* Desktop spacing adjusted for full width */
       .page-section {
-        padding: 25px 15px;
+        padding: 35px 40px;
+        max-width: 1400px;
+        margin: 0 auto;
       }
       
       /* Hero section */
       .hero-container {
-        height: 40vh;
+        height: 50vh;
       }
       .hero-content h1 {
-        font-size: 2.4rem;
+        font-size: 3rem;
       }
       
-      /* Menu items */
-      .img-wrap {
-        height: 200px;
+      /* Menu items - display in grid for desktop */
+      .menu-item {
+        max-width: 400px;
+        margin: 0 auto 25px;
       }
       
       /* Navigation */
       .nav-links a {
-        font-size: 0.65rem;
+        font-size: 0.8rem;
+        padding: 12px 24px;
       }
       
-      /* Heading preserved */
+      /* Heading improvements */
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
     }
     
